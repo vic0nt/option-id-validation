@@ -15,12 +15,12 @@ class ValidationRules[Wrapped[_] : ValidationContext] {
   import ValidationContext._
   import ValidationRules._
 
-  def all(doc: PaymentDocument[Wrapped, Status[Wrapped]]): Result[PaymentDocument[Id, Valid]] =
+/*  def all(doc: PaymentDocument[Wrapped, Status[Wrapped]]): Result[PaymentDocument[Id, Valid]] =
     (
       doc.id.valid,
       doc.documentInfo.valid,
       doc.documentSum.withinContext(_.valid, "documentSum")
-    ).mapN(PaymentDocument.asValid _)
+    ).mapN(PaymentDocument.asValid _)*/
 
   object Common {
 
